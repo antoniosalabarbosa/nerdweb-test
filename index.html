@@ -21,6 +21,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nerdweb.com.br/">
     <title>Nerdweb - Agência de Marketing Digital em Curitiba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://kit.fontawesome.com/fda19438a3.js" crossorigin="anonymous"></script>
@@ -34,28 +37,52 @@
 <body>
     <div id="root">
         <header>
-            <div id="logo_hd">
-                <img src="./src/logo.png" alt="Logo Nerdweb">
+            <div id="hd_1">
+                <div id="logo_hd">
+                    <img src="./src/logo.png" alt="Logo Nerdweb">
+                </div>
+    
+                <nav id="nav_p_hd">
+                    <a href="#">Nerdweb</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Atendimento</a>
+                </nav>
+    
+                <div id="itens_hd">
+                    <select id="daily_hd">
+                        <option value="0" selected>DIA A DIA</option>
+                        <option value="1">Lorem</option>
+                        <option value="2">Ipsum</option>
+                        <option value="3">Dolor</option>
+                        <option value="4">Sit</option>
+                    </select>
+    
+                    <i class="fa-regular fa-circle-user"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
             </div>
 
-            <nav id="nav_p_hd">
-                <a href="#">Nerdweb</a>
-                <a href="#">Serviços</a>
-                <a href="#">Blog</a>
-                <a href="#">Atendimento</a>
-            </nav>
+            <div id="hd_2">
+                <nav id="nav_s_hd">
+                    <span class="subheader_hd" id="s_header_hd">
+                        SITES
+                        <i class="fa-solid fa-caret-down"></i>
+                    </span>
 
-            <div id="itens_hd">
-                <select id="daily_hd">
-                    <option value="0" selected>DIA A DIA</option>
-                    <option value="1">Lorem</option>
-                    <option value="2">Ipsum</option>
-                    <option value="3">Dolor</option>
-                    <option value="4">Sit</option>
-                </select>
+                    <a href="#" class="subheader_hd">REDES SOCIAIS</a>
 
-                <i class="fa-regular fa-circle-user"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="#" class="subheader_hd">E-COMMERCE</a>
+
+                    <a href="#" class="subheader_hd">MÍDIA ONLINE</a>
+                    
+                    <a href="#" class="subheader_hd">LANDING PAGES</a>
+                </nav>
+
+                <div class="search">
+                    <input type="text" placeholder="Digite sua pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
         </header>
     </div>
