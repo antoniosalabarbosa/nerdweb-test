@@ -49,11 +49,11 @@ div#logo_hd img{
 }
 
 nav#nav_p_hd{
-    margin: 0 0 0 calc(7vw - 20px);
+    margin: 0 0 0 calc(5vw - 10px);
     width: 60%;
 }
 nav#nav_p_hd a{
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 10px;
     color: #2C3A2F;
     font-size: 1em;
@@ -90,10 +90,12 @@ nav#nav_s_hd{
 }
 .subheader_hd{
     margin: 0 calc(3vw - 5px) 0 0;
+    padding: 7px;
     color: #fff;
     font-size: .9em;
     font-weight: 200;
     cursor: pointer;
+    white-space: nowrap;
 }
 div.search{
     border: 2px solid var(--blue-medium);
@@ -103,6 +105,8 @@ div.search{
     align-items: center;
 }
 div.search input[type='text']{
+    width: calc(20vw - 10px);
+    max-width: 210px;
     padding: 5px 5px;
     color: #fff;
     font-size: 1em;
@@ -112,4 +116,37 @@ div.search input[type='text']{
 div.search i{
     color: #fff;
     font-size: 1.4em;
+}
+
+/*RESPONSIVO*/
+
+div#res_icon{
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+div#res_icon div{
+    margin: 3px 0;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+}
+
+div#menu_res{
+    height: 100%;
+    position: fixed;
+    top: 148px;
+    right: 0;
+    bottom: 0%;
+    z-index: 1;
+    background-color: var(--gray-green-dark);
+}
+
+@media screen and (max-width: 880px){
+    div#itens_hd select{
+        display: none;
+    }
 }
