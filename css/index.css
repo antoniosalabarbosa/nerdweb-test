@@ -1,3 +1,15 @@
+section.sec1{
+    width: 100%;
+    background-image: url(../src/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 5px solid var(--blue-light);
+}
+section.sec1{
+    width: 100%;
+    min-height: 500px;
+}
 section.sec2{
     padding: 20px 0;
     width: 100%;
@@ -15,17 +27,19 @@ div.sec2-text{
     z-index: 1;
     background-color: #fff;
 }
-div.sec2-text h3{
+div.sec2-text h3,
+section.sec3 h3{
     font-size: 2.2em;
     font-weight: bolder;
     line-height: 1.1;
 }
-div.sec2-text h3 span{
+div.sec2-text h3 span,
+section.sec3 h3 span{
     color: var(--blue-medium);
 }
 
-/*SLIDER*/
-div.slider-container {
+/*SLIDER 1*/
+div.slider-container{
     position: relative;
     z-index: 0;
     width: 100%;
@@ -33,6 +47,10 @@ div.slider-container {
     padding: 10px 40px 10px 10px;
     overflow-x: scroll;
 }
+div.slider-container::-webkit-scrollbar{
+    visibility: hidden;
+}
+
 div.slider-controles{
     margin: 0 0 10px 0;
     width: 100px;
@@ -87,4 +105,38 @@ div.swiper-slide img {
         min-width: inherit;
         max-width: 200px !important;
     }
+}
+
+/*SLIDER 2*/
+
+section.sec3{
+    margin: 20px 0;
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.sec3 h3{
+    text-align: center;
+}
+div.slider-container-2{
+    margin: 50px 0 0 0;
+    width: 100%;
+    position: relative;
+    background-color: var(--gray-light);
+}
+div.swiper-wrapper-2{
+    display: flex;
+}
+div.swiper-slide-2{
+    margin: 0 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray-medium);
+}
+div.swiper-slide-2 strong{
+    font-size: 14px;
 }

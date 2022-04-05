@@ -1,4 +1,4 @@
-let swiper = new Swiper('.swiper-container', {
+let swiper_1 = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.slider-next',
         prevEl: '.slider-prev'
@@ -29,4 +29,14 @@ let swiper = new Swiper('.swiper-container', {
             spaceBetween: 40,
         },
     }
+});
+
+let swiper_2 = new Swiper('.swiper-container-2', {    
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 });
