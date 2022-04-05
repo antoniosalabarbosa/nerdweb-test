@@ -118,6 +118,59 @@ div.search i{
     color: #fff;
     font-size: 1.4em;
 }
+div#sub_menu.active{
+    animation: submenu 200ms forwards ease;
+}
+div#sub_menu{
+    visibility: hidden;
+    padding: 0 50px;
+    width: 100%;
+    position: fixed;
+    top: 147px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+@keyframes submenu{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+div#sub_menu div.menu{
+    width: 100%;
+    border-top: 5px solid var(--blue-light);
+    padding: 20px 20px calc(3vw + 10px) 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+}
+div#sub_menu div.menu
+div.item_menu{
+    max-width: 140px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+div.item_menu strong{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.246);
+    padding: 0 0 10px 0;
+    font-size: 1.2em;
+    font-family: 'Ubuntu',Arial, Helvetica, sans-serif;
+}
+div.item_menu a{
+    margin: 10px 0 0 0;
+    font-family: 'Ubuntu',Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: var(--gray-green-dark);
+}
 
 /*RESPONSIVO*/
 
@@ -144,8 +197,8 @@ div#res_icon div{
 div#menu_res{
     width: 40%;
     min-width: 258px;
-    padding: 10px;
-    height: 100%;
+    padding: 10px 10px 300px 10px;
+    height: 130%;
     position: fixed;
     top: 74px;
     right: -100%;
@@ -155,12 +208,45 @@ div#menu_res{
     transition: 200ms ease;
 }
 div#menu_res nav{
+    margin: calc(1vw + 5px) 0 0 0;
     display: flex;
     flex-direction: column;
 }
 div#menu_res nav a,
 div#menu_res nav span{
+    padding: 10px;
+    width: 100%;
     color: #fff;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+div#menu_res nav a:hover,
+div#menu_res nav span:hover{
+    background-color: rgba(255, 255, 255, 0.276);
+}
+ul.res_sublinks.active{
+    display: block;
+}
+ul.res_sublinks{
+    margin: 0 0 0 7vw;
+    display: none;
+}
+ul.res_sublinks li{
+    max-width: 110px;
+    width: 100%;
+    list-style: none;
+}
+ul.res_sublinks li{
+    margin: 5px 0 0 0;
+    color: #fff;
+}
+ul.res_sublinks li.title{
+    border-bottom: 1px solid #fff;
+    padding: 0 0 5px 0;
+}
+ul.res_sublinks li a{
+    display: block;
+    padding: 7px;
 }
 
 @media screen and (max-width: 880px){
