@@ -1,0 +1,15 @@
+section.sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    max-width: 50%;
+    padding: 10px 40px;
+    overflow-x: scroll;
+}
+
+.slider-container .swiper-slide img {
+    width: 100%;
+}

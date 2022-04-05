@@ -20,6 +20,7 @@ a{
 body{
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 div#root{
     max-width: 1600px;
@@ -27,6 +28,14 @@ div#root{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+button.btn_sec{
+    padding: 5px 30px;
+    font-size: 1em;
+    font-weight: bolder;
+    color: var(--gray-green-dark);
+    background-color: var(--blue-light);
+    cursor: pointer;
 }
 header{
     width: 100%;
