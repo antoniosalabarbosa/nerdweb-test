@@ -1,18 +1,12 @@
 section.sec1{
-    width: 100%;
+    min-height: 500px;
     background-image: url(../src/banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 5px solid var(--blue-light);
 }
-section.sec1{
-    width: 100%;
-    min-height: 500px;
-}
 section.sec2{
-    padding: 20px 0;
-    width: 100%;
     display: flex;
 }
 div.sec2-text{
@@ -31,20 +25,17 @@ div.sec2-text h3 span,
 section.sec3 h3 span{
     color: var(--blue-medium);
 }
-
 /*SLIDER 1*/
 div.slider-container{
     position: relative;
     z-index: 0;
-    width: 100%;
-    max-width: 800px;
-    padding: 10px 40px 10px 10px;
+    width: 99%;
+    padding: 10px;
     overflow-x: scroll;
 }
 div.slider-container::-webkit-scrollbar{
     visibility: hidden;
 }
-
 div.slider-controles{
     margin: 0 0 10px 0;
     width: 100px;
@@ -71,43 +62,9 @@ div.swiper-slide img {
     min-width: 200px;
 }
 
-@media screen and (max-width: 880px){
-    section.sec2{
-        flex-direction: column;
-        align-items: center;
-    }
-    div.sec2-text{
-        max-width: inherit;
-        width: 100%;
-        align-items: center;
-    }
-    div.sec2-text h3{
-        padding: 0 10px;
-        text-align: center;
-        margin: 0 0 20px 0;
-    }
-    div.slider-container{
-        margin: 20px 0 0 0;
-    }
-    div.swiper-slide{
-        padding: 10px 0px;
-        min-width: inherit;
-        max-width: 250px;
-    }
-    div.swiper-slide img {
-        width: 90%;
-        min-width: inherit;
-        max-width: 200px !important;
-    }
-}
-
 /*SLIDER 2*/
-
 section.sec3{
-    margin: 20px 0 50px 0;
     padding: 0 50px;
-    width: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -121,6 +78,18 @@ div.slider-container-2{
     display: flex;
     background-color: var(--gray-light);
     overflow-x: scroll;
+}
+div.slider-container-2::-webkit-scrollbar {
+    width: 10px;
+}
+div.slider-container-2::-webkit-scrollbar-track {
+    background-color: var(--gray-medium);
+}
+div.slider-container-2::-webkit-scrollbar-thumb {
+    background-color: var(--blue-light);
+}
+div.slider-container-2::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-medium);
 }
 div.swiper-wrapper-2{
     display: flex;
@@ -138,7 +107,7 @@ div.swiper-slide-2 strong{
 }
 
 section.sec4{
-    width: 100%;
+    display: block;
 }
 div.sec4-container{
     padding: 70px 3vw;
@@ -160,10 +129,8 @@ div.sec4-text p{
 }
 
 section.sec5{
-    margin: 50px 0 160px 0;
-    width: 100%;
+    margin: 0 0 170px 0;
     height: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -186,14 +153,6 @@ div.sec5-container{
 }
 div.sec5-service{
     max-width: 400px;
-}
-@media screen and (max-width: 1260px){
-    div.sec5-container{
-        margin: 0;
-    }
-    div.sec5-service{
-        margin: 60px;
-    }
 }
 div.sec5-service div.sec5-img{
     width: 100%;
@@ -233,7 +192,7 @@ div.sec5-txt button{
 }
 
 section.sec6{
-    width: 100%;
+    display: block;
 }
 div.sec6-container{
     padding: 70px 3vw;
@@ -256,14 +215,11 @@ div.sec6-text p{
     font-weight: bold;
     color: var(--blue-medium);
 }
-
 /**/
 
 section.sec7{
-    margin: 50px 0 0 0;
+    
     padding: 0 50px;
-    width: 100%;
-    display: flex;
     justify-content: space-between;
 }
 div.sec7-text{
@@ -287,22 +243,13 @@ div.selos_bg img{
     max-width: 170px;
     max-height: 170px;
 }
-@media screen and (max-width: 1080px){
-    section.sec7{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-}
 
 section.sec8{
-    margin: 50px 0 0 0;
+    
     padding: 50px;
-    width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--gray-light);
+    background-color: #f4f4f4;
 }
 div.sec8-txt{
     margin: 0 20px 0 0;
@@ -334,7 +281,52 @@ form.sec8-form input[type='email']{
 form.sec8-form input[type='submit']{
     margin: 15px 0 0 0;
 }
+@media screen and (max-width: 1260px){
+    div.sec5-container{
+        margin: 0;
+    }
+    div.sec5-service{
+        margin: 60px;
+    }
+}
+@media screen and (max-width: 1080px){
+    section.sec7{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
 @media screen and (max-width: 880px){
+    section.sec1{
+        margin: 74px 0 0 0;
+    }
+    section.sec2{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.sec2-text{
+        max-width: inherit;
+        width: 100%;
+        align-items: center;
+    }
+    div.sec2-text h3{
+        padding: 0 10px;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+    div.slider-container{
+        margin: 20px 0 0 0;
+    }
+    div.swiper-slide{
+        padding: 10px 0px;
+        min-width: inherit;
+        max-width: 250px;
+    }
+    div.swiper-slide img {
+        width: 90%;
+        min-width: inherit;
+        max-width: 200px !important;
+    }
     section.sec8{
         flex-direction: column;
         align-items: center;
