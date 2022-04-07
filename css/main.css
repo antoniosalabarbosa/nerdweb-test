@@ -3,6 +3,7 @@
     --blue-light: #71D8FF;
     --gray-light: #e8e8e8;
     --gray-medium: #c9c9c9;
+    --gray-dark: #283137;
     --gray-green-dark: #033244;
 
     --pd-bod: 0 40px;
@@ -30,13 +31,18 @@ div#root{
     flex-direction: column;
     align-items: center;
 }
-button.btn_sec{
-    padding: 5px 30px;
+.btn_sec{
+    padding: 10px 30px;
     font-size: 1em;
     font-weight: bolder;
     color: var(--gray-green-dark);
     background-color: var(--blue-light);
     cursor: pointer;
+}
+h3{
+    font-size: 2.2em;
+    font-weight: bolder;
+    line-height: 1.1;
 }
 header{
     width: 100%;
@@ -135,7 +141,7 @@ div#sub_menu{
     visibility: hidden;
     padding: 0 50px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 147px;
     left: 0;
     right: 0;
@@ -289,4 +295,64 @@ ul.res_sublinks li a{
     div.search input[type='text']{
         width: 80%;
     }
+}
+
+footer{
+    margin: 70px 0 0 0;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-dark);
+}
+div.ft_1{
+    padding: 0 0 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+div.ft-img{
+    width: 100px;
+}
+div.ft-img img{
+    width: 100%;
+}
+div.ft_1 div.ft-itens{
+    display: flex;
+    justify-content: space-between;
+}
+div.ft_1 div.ft-itens div.item{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+div.ft_1 div.ft-itens div.item strong{
+    margin: 0 0 20px 0;
+    font-size: 1.15em;
+    color: #fff;
+}
+div.ft_1 div.ft-itens div.item a{
+    margin: 5px 0;
+    padding: 5px;
+    color: var(--blue-medium);
+}
+div.ft_1 div.ft-itens div.item p{
+    max-width: 200px;
+    color: #ffffffc8; 
+}
+
+
+div.ft_2{
+    border-top: 3px solid #ffffffc8;
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+div.ft_2 div.ft-text p{
+    color: #ffffffc8;
+}
+div.social-medias p{
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: #ffffffc8;
 }
