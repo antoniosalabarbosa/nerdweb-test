@@ -1,4 +1,11 @@
+/*
+    O MAIN.CSS tem como intúito agrupar configurações de estilo que
+   apareceram em todas ou muitas páginas.
+*/
+
+/*Variáveis de Cores*/
 :root{
+    --blue-dark: #0089BC;
     --blue-medium: #00AEEF;
     --blue-light: #71D8FF;
     --gray-light: #e8e8e8;
@@ -6,6 +13,7 @@
     --gray-dark: #283137;
     --gray-green-dark: #033244;
 }
+/*Configurações gerais*/
 *{
     margin: 0;
     border: 0;
@@ -13,15 +21,14 @@
     font-family: 'Roboto Slab';
     box-sizing: border-box;
 }
-a{
-    color: #000;
-    text-decoration: none;
-}
+
 body{
     display: flex;
     justify-content: center;
     overflow-x: hidden;
 }
+
+/*Div raís para centralizar todo conteúdo*/
 div#root{
     max-width: 1600px;
     width: 100%;
@@ -29,6 +36,8 @@ div#root{
     flex-direction: column;
     align-items: center;
 }
+
+/*Template de botão*/
 .btn_sec{
     padding: 10px 30px;
     font-size: 1em;
@@ -36,22 +45,37 @@ div#root{
     color: var(--gray-green-dark);
     background-color: var(--blue-light);
     cursor: pointer;
+    transition: 200ms ease all;
 }
+
+.btn_sec:hover{
+    background-color: var(--blue-medium);
+}
+
 h3{
     font-size: 2.2em;
     font-weight: bolder;
     line-height: 1.1;
 }
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
 section{
     width: 100%;
     display: flex;
-    margin: 0 0 70px 0;
+    margin: 0 0 80px 0;
 }
+
+/*Header Principal*/
 header{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 div#hd_1{
     position: fixed;
     top: 0;
@@ -66,9 +90,11 @@ div#hd_1{
     border-bottom: 5px solid var(--blue-light);
     background-color: #fff;
 }
+
 div#logo_hd{
     width: 10%;
 }
+
 div#logo_hd img{
     width: 100%;
     min-width: 120px;
@@ -78,6 +104,7 @@ nav#nav_p_hd{
     margin: 0 0 0 calc(5vw - 10px);
     width: 60%;
 }
+
 nav#nav_p_hd a{
     margin: 0 10px;
     padding: 10px;
@@ -85,6 +112,7 @@ nav#nav_p_hd a{
     font-size: 1em;
     transition: 200ms ease all;
 }
+
 nav#nav_p_hd a:hover{
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.1) -1.95px 1.95px 2.6px;
@@ -107,8 +135,7 @@ div#itens_hd i{
     cursor: pointer;
 }
 
-/*subheader*/
-
+/*Header secundário*/
 div#hd_2{
     margin: 74px 0 0 0;
     padding: 14px 50px;
@@ -117,18 +144,28 @@ div#hd_2{
     align-items: center;
     background-color: var(--gray-green-dark);
 }
+
 nav#nav_s_hd{
     width: 90%;
 }
+/*Itens do Header (SPAN, A)*/
 .subheader_hd{
-    margin: 0 calc(3vw - 5px) 0 0;
-    padding: 7px;
+    margin: 5px;
+    padding: 5px;
     color: #fff;
     font-size: .9em;
     font-weight: 200;
     cursor: pointer;
     white-space: nowrap;
+    transition: 200ms ease all;
 }
+
+.subheader_hd:hover{
+    font-weight: bold;
+    color: var(--gray-dark);
+    background-color: #fff;
+}
+
 div.search{
     border: 2px solid var(--blue-medium);
     border-radius: 7px;
@@ -136,6 +173,7 @@ div.search{
     display: flex;
     align-items: center;
 }
+
 div.search input[type='text']{
     width: calc(20vw - 10px);
     max-width: 210px;
@@ -145,13 +183,17 @@ div.search input[type='text']{
     outline: none;
     background-color: inherit;
 }
+
 div.search i{
     color: #fff;
     font-size: 1.4em;
 }
+
+/*Submenu, aparece ao clicar em SITES*/
 div#sub_menu.active{
     animation: submenu 200ms forwards ease;
 }
+
 div#sub_menu{
     visibility: hidden;
     padding: 0 50px;
@@ -162,6 +204,7 @@ div#sub_menu{
     right: 0;
     z-index: 1;
 }
+
 @keyframes submenu{
     0%{
         visibility: hidden;
@@ -175,6 +218,7 @@ div#sub_menu{
         transform: translateX(0%);
     }
 }
+
 div#sub_menu div.menu{
     width: 100%;
     border-top: 5px solid var(--blue-light);
@@ -183,6 +227,7 @@ div#sub_menu div.menu{
     justify-content: space-around;
     background-color: #fff;
 }
+
 div#sub_menu div.menu
 div.item_menu{
     max-width: 140px;
@@ -190,21 +235,27 @@ div.item_menu{
     display: flex;
     flex-direction: column;
 }
+
 div.item_menu strong{
     border-bottom: 2px solid rgba(0, 0, 0, 0.246);
     padding: 0 0 10px 0;
     font-size: 1.2em;
     font-family: 'Ubuntu',Arial, Helvetica, sans-serif;
 }
+
 div.item_menu a{
     margin: 10px 0 0 0;
     font-family: 'Ubuntu',Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     color: var(--gray-green-dark);
+    transition: 200ms ease all;
 }
 
-/*RESPONSIVO*/
+div.item_menu a:hover{
+    font-weight: bold;
+}
 
+/*Ícone Responsívo*/
 div#res_icon{
     width: 50px;
     height: 50px;
@@ -213,9 +264,17 @@ div#res_icon{
     justify-content: center;
     cursor: pointer;
 }
-div#res_icon.active div:nth-child(1){ transform: rotate(45deg) translate(5px, 170%); }
-div#res_icon.active div:nth-child(2){ opacity: 0; }
-div#res_icon.active div:nth-child(3){ transform: rotate(-45deg) translate(7px, -200%); }
+div#res_icon.active div:nth-child(1){ 
+    transform: rotate(45deg) translate(5px, 170%); 
+}
+
+div#res_icon.active div:nth-child(2){ 
+    opacity: 0; 
+}
+
+div#res_icon.active div:nth-child(3){ 
+    transform: rotate(-45deg) translate(7px, -200%); 
+}
 
 div#res_icon div{
     margin: 3px 0;
@@ -225,11 +284,12 @@ div#res_icon div{
     transition: 200ms ease;
 }
 
+/*Menu responsívo*/
 div#menu_res{
-    width: 40%;
+    width: 60%;
     min-width: 258px;
     border-left: 3px solid var(--blue-medium);
-    padding: 10px 10px 300px 10px;
+    padding: 10px 10px 300px 0px;
     height: 130%;
     position: fixed;
     top: 74px;
@@ -239,48 +299,73 @@ div#menu_res{
     background-color: var(--gray-green-dark);
     transition: 200ms ease;
 }
+/*Search do menu responsivo*/
+div#menu_res div.search{
+    margin: 0 10px;
+}
+
 div#menu_res nav{
     margin: calc(1vw + 5px) 0 0 0;
     display: flex;
     flex-direction: column;
 }
+
+/*Itens do menu*/
 div#menu_res nav a,
 div#menu_res nav span{
-    padding: 10px;
+    padding: 10px 20px;
     width: 100%;
     color: #fff;
     cursor: pointer;
     transition: 200ms ease;
 }
+
 div#menu_res nav a:hover,
 div#menu_res nav span:hover{
-    background-color: rgba(255, 255, 255, 0.276);
+    background-color: #ffffff46;
 }
+/*Item clicável para Abrir submenu*/
+span#btn_res_submenu.active{
+    background-color: #ffffff13;
+}
+/*Submenu responsivo*/
 ul.res_sublinks.active{
     display: block;
 }
+
 ul.res_sublinks{
-    margin: 0 0 0 7vw;
+    padding: 0 0 0 2vw;
     display: none;
+    background-color: #ffffff13;
 }
+
 ul.res_sublinks li{
-    max-width: 110px;
     width: 100%;
     list-style: none;
 }
+
 ul.res_sublinks li{
     margin: 5px 0 0 0;
     color: #fff;
 }
+
 ul.res_sublinks li.title{
     border-bottom: 1px solid #fff;
     padding: 0 0 5px 0;
 }
+
+ul.res_sublinks li.title strong::before{
+    content: ">>";
+    margin: 0 7px 0 0;
+    color: #fff;
+}
+
 ul.res_sublinks li a{
     display: block;
     padding: 7px;
 }
 
+/*FOOTER*/
 footer{
     padding: 50px;
     width: 100%;
@@ -288,84 +373,116 @@ footer{
     flex-direction: column;
     background-color: var(--gray-dark);
 }
+
+/*Área superior do footer com Links*/
 div.ft_1{
     padding: 0 0 80px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 div.ft-img{
     width: 100px;
 }
+
 div.ft-img img{
     width: 100%;
 }
+
 div.ft_1 div.ft-itens{
     display: flex;
     justify-content: space-between;
 }
+
 div.ft_1 div.ft-itens div.item{
     margin: 0 20px;
     display: flex;
     flex-direction: column;
 }
+
 div.ft_1 div.ft-itens div.item strong{
     margin: 0 0 20px 0;
     font-size: 1.15em;
     color: #fff;
 }
+
 div.ft_1 div.ft-itens div.item a{
     margin: 5px 0;
     padding: 5px;
     color: var(--blue-medium);
 }
+
 div.ft_1 div.ft-itens div.item p{
     max-width: 200px;
     color: #ffffffc8; 
 }
 
+/*Área inferior do footer*/
 div.ft_2{
     border-top: 3px solid #ffffffc8;
     padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
 }
+
 div.ft_2 div.ft-text p{
     color: #ffffffc8;
 }
+
 div.social-medias p{
     margin: 0 0 10px 0;
     font-size: 1.5em;
     color: #ffffffc8;
 }
 
+div.icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.icons a i{
+    margin: 0 1vw;
+    color: #fff;
+    font-size: 2em;
+}
+
+/*HEADER e FOOTER adaptados para telas menores*/
 @media screen and (max-width: 880px){
     div#hd_1{
         padding: 0 20px;
     }
+
     nav#nav_p_hd{
         display: none;
     }
+
     div#itens_hd{
         width: 50%;
     }
+
     div#itens_hd select{
         display: none;
     }
+
     div#hd_2{
         display: none;
     }
+
     div#res_icon,
     div#itens_hd i{
         margin: 0 7px;
         display: flex;
     }
+
     div#menu_res{
         overflow-y: scroll;
     }
     div.search{
         justify-content: space-between;
     }
+
     div.search input[type='text']{
         width: 80%;
     }
@@ -373,10 +490,12 @@ div.social-medias p{
     div.ft_1{
         flex-direction: column;
     }
+
     div.ft_1 div.ft-itens{
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+
     div.ft_1 div.ft-itens div.item{
         width: 30vw;
         margin: 20px 30px;
@@ -388,6 +507,7 @@ div.social-medias p{
     div.ft_2 div.ft-text p{
         margin: 0 0 5px 0;
     }
+
     div.social-medias p{
         margin: 20px 0 5px 0;
     }

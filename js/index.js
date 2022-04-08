@@ -30,13 +30,3 @@ let swiper_1 = new Swiper('.swiper-container', {
         },
     }
 });
-
-let swiper_2 = new Swiper('.swiper-container-2', {    
-    slidesPerView: 1,
-    spaceBetween: 10,
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});

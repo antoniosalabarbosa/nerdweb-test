@@ -1,3 +1,9 @@
+/*
+     O INDEX.CSS tem como intúito agrupar propriedades de estilo
+    que serão aplicadas na página inicial.
+*/
+
+/*Primeira SECTION, exibe o banner principal*/
 section.sec1{
     min-height: 500px;
     background-image: url(../src/banner.png);
@@ -6,9 +12,12 @@ section.sec1{
     background-size: cover;
     border-bottom: 5px solid var(--blue-light);
 }
+
+/*Segunda SECTION, exibe o SLIDER(Swiper) e algumas informações*/
 section.sec2{
     display: flex;
 }
+
 div.sec2-text{
     margin: 0 calc(5vw + 10px) 0 0;
     padding: 10px 0 0 50px;
@@ -21,11 +30,13 @@ div.sec2-text{
     z-index: 1;
     background-color: #fff;
 }
+
 div.sec2-text h3 span,
 section.sec3 h3 span{
     color: var(--blue-medium);
 }
-/*SLIDER 1*/
+
+/*SLIDER feito em conjunto com SWIPER (INDEX.JS)*/
 div.slider-container{
     position: relative;
     z-index: 0;
@@ -33,14 +44,17 @@ div.slider-container{
     padding: 10px;
     overflow-x: scroll;
 }
+
 div.slider-container::-webkit-scrollbar{
     visibility: hidden;
 }
+
 div.slider-controles{
     margin: 0 0 10px 0;
     width: 100px;
     display: flex;
 }
+
 div.slider-controles div i{
     margin: 0 1vw 0 0;
     border-radius: 100%;
@@ -50,6 +64,7 @@ div.slider-controles div i{
     color: var(--gray-green-dark);
     background-color: rgba(34, 34, 34, 0.083);
 }
+
 div.swiper-slide{
     margin: 10px calc(2vw + 20px) 10px 0;
     padding: 10px 0px;
@@ -57,20 +72,29 @@ div.swiper-slide{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: center;
 }
+
 div.swiper-slide img {
     width: 90%;
     min-width: 200px;
 }
 
-/*SLIDER 2*/
+
 section.sec3{
     padding: 0 50px;
     flex-direction: column;
     align-items: center;
 }
+
 section.sec3 h3{
     text-align: center;
 }
+
+/*
+    Área de Scroll onde os produtos são exibidos.
+    
+    Obs.: Swiper.js não estava funcionando nesse elemento, 
+    a biblioteca foi aplicada apenas no slider da SECTION 2.
+*/
 div.slider-container-2{
     margin: 50px 0 20px 0;
     padding: 20px 0;
@@ -79,21 +103,28 @@ div.slider-container-2{
     background-color: var(--gray-light);
     overflow-x: scroll;
 }
+
+/* SCROLLBAR estilizada (Não funciona em todos os Navegadores) */
 div.slider-container-2::-webkit-scrollbar {
-    width: 10px;
+    transition: 200ms ease;
 }
+
 div.slider-container-2::-webkit-scrollbar-track {
     background-color: var(--gray-medium);
 }
+
 div.slider-container-2::-webkit-scrollbar-thumb {
-    background-color: var(--blue-light);
-}
-div.slider-container-2::-webkit-scrollbar-thumb:hover {
     background-color: var(--blue-medium);
 }
+
+div.slider-container-2::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-dark);
+}
+
 div.swiper-wrapper-2{
     display: flex;
 }
+
 div.swiper-slide-2{
     margin: 0 20px;
     padding: 10px;
@@ -102,25 +133,32 @@ div.swiper-slide-2{
     align-items: center;
     background-color: var(--gray-medium);
 }
+
 div.swiper-slide-2 strong{
     font-size: 14px;
 }
 
+/*SECTION: "Faça parte do nosso time de nerds"*/
 section.sec4{
     display: block;
+    padding: 0 50px;
 }
+
 div.sec4-container{
-    padding: 70px 3vw;
+    padding: calc(5vw + 40px) 3vw;
     width: 100%;
     background-image: url(../src/img/bg_time.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 5px solid var(--blue-light);
 }
+
 div.sec4-text{
     max-width: 600px;
     height: 100%;
 }
+
 div.sec4-text p{
     margin: 10px 0 30px 0;
     font-size: 1.2em;
@@ -128,22 +166,26 @@ div.sec4-text p{
     color: var(--gray-green-dark);
 }
 
+/*SECTION de Serviços*/
 section.sec5{
     margin: 0 0 170px 0;
     height: 100%;
     flex-direction: column;
     align-items: center;
 }
+
 section.sec5 h4,
 section.sec5 h3{
     padding: 0 10px;
     text-align: center;
 }
+
 section.sec5 h4{
     margin: 10px 0 0 0;
     font-size: 1.2em;
     color: var(--blue-medium);
 }
+
 div.sec5-container{
     margin: 30px 0 0 0;
     width: 100%;
@@ -151,9 +193,11 @@ div.sec5-container{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 div.sec5-service{
     max-width: 400px;
 }
+
 div.sec5-service div.sec5-img{
     width: 100%;
     height: 100%;
@@ -163,27 +207,34 @@ div.sec5-service div.sec5-img{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 div.sec5-service:nth-child(1) div.sec5-img{
     background-image: url(../src/img/Imagem_card_servico.jpg);
 }
+
 div.sec5-service:nth-child(2) div.sec5-img{
     background-image: url(../src/img/Imagem_card_servico-1.jpg);
 }
+
 div.sec5-service:nth-child(3) div.sec5-img{
     background-image: url(../src/img/Imagem_card_servico-2.jpg);
 }
+
 div.sec5-txt{
     padding: 20px;
     background-color: var(--gray-dark);
 }
+
 div.sec5-txt strong{
     color: #fff;
 }
+
 div.sec5-txt p{
     margin: 10px 0 40px 0;
     font-weight: normal;
     color: #ffffffc8;
 }
+
 div.sec5-txt button{
     font-size: 16px;
     color: var(--blue-medium);
@@ -191,9 +242,12 @@ div.sec5-txt button{
     cursor: pointer;
 }
 
+/*SECTION: "Conheça a visão Nerdweb e entenda nossa história"*/
 section.sec6{
     display: block;
+    padding: 0 50px;
 }
+
 div.sec6-container{
     padding: 70px 3vw;
     width: 100%;
@@ -202,40 +256,55 @@ div.sec6-container{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 div.sec6-text{
     max-width: 700px;
     height: 100%;
 }
+
 div.sec6-text h3{
     color: #fff;
 }
+
 div.sec6-text p{
     margin: 10px 0 30px 0;
     font-size: 1.2em;
     font-weight: bold;
     color: var(--blue-medium);
 }
-/**/
 
+button.btn_sec.sobre{
+    color: #fff;
+    background-color: var(--blue-dark);
+}
+
+button.btn_sec.sobre:hover{
+    background-color: var(--blue-medium);
+}
+
+/*SECTION: Certificados*/
 section.sec7{
-    
     padding: 0 50px;
     justify-content: space-between;
 }
+
 div.sec7-text{
     max-width: 600px;
 }
+
 div.sec7-text p{
     margin: 30px 0 0 0;
     line-height: 1.5;
     color: var(--gray-dark);
 }
+
 div.selos_bg{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 div.selos_bg img{
     margin: 2vw 5px 0 5px;
     width: 100%;
@@ -244,29 +313,33 @@ div.selos_bg img{
     max-height: 170px;
 }
 
+/*SECTION: "Novidades e descontos especiais"*/
 section.sec8{
-    
     padding: 50px;
     flex-direction: row;
     justify-content: space-between;
     background-color: #f4f4f4;
 }
+
 div.sec8-txt{
     margin: 0 20px 0 0;
     max-width: 350px;
 }
+
 div.sec8-txt p{
     margin: 20px 0 0 0;
     font-size: 1.4em;
     font-weight: bold;
     color: var(--blue-medium);
 }
+
 form.sec8-form{
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 form.sec8-form input[type='text'],
 form.sec8-form input[type='email']{
     margin: 0 0 15px 0;
@@ -278,69 +351,88 @@ form.sec8-form input[type='email']{
     outline: none;
     background-color: #ffffff00;
 }
+
 form.sec8-form input[type='submit']{
     margin: 15px 0 0 0;
 }
+
+/*Configuração responsiva*/
 @media screen and (max-width: 1260px){
     div.sec5-container{
         margin: 0;
     }
+
     div.sec5-service{
         margin: 60px;
     }
+
 }
+
 @media screen and (max-width: 1080px){
     section.sec7{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
+
 }
+
 @media screen and (max-width: 880px){
     section.sec1{
-        margin: 74px 0 0 0;
+        margin: 74px 0 50px 0;
     }
+
     section.sec2{
         flex-direction: column;
         align-items: center;
     }
+
     div.sec2-text{
         max-width: inherit;
         width: 100%;
         align-items: center;
     }
+
     div.sec2-text h3{
         padding: 0 10px;
         text-align: center;
         margin: 0 0 20px 0;
     }
+
     div.slider-container{
         margin: 20px 0 0 0;
     }
+
     div.swiper-slide{
         padding: 10px 0px;
         min-width: inherit;
         max-width: 250px;
     }
+
     div.swiper-slide img {
         width: 90%;
         min-width: inherit;
         max-width: 200px !important;
     }
+
     section.sec8{
         flex-direction: column;
         align-items: center;
     }
+
     div.sec8-txt{
         max-width: none;
         text-align: center;
     }
+
     div.sec8-txt p{
         margin: 10px 0 20px 0;
         padding: 0 80px;
     }
+
     form.sec8-form{
         width: 80%;
         align-items: center;
     }
+
 }

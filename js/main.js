@@ -32,4 +32,5 @@ const btn_res_submenu = document.querySelector("span#btn_res_submenu");
 const ul_res = document.querySelector("ul.res_sublinks");
 btn_res_submenu.addEventListener("click", ()=>{
     ul_res.classList.toggle("active");
+    btn_res_submenu.classList.toggle("active");
 });
