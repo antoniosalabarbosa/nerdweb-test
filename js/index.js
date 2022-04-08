@@ -1,3 +1,10 @@
+/*
+    Referências:
+
+    - https://www.youtube.com/watch?v=tOUlVIMqhcc&t=480s
+    - https://github.com/Jhon-20/Carrusel-Cards-Swiper
+*/
+
 let swiper_1 = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.slider-next',

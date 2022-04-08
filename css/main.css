@@ -1,6 +1,6 @@
 /*
     O MAIN.CSS tem como intúito agrupar configurações de estilo que
-   apareceram em todas ou muitas páginas.
+   aparecerão em todas as páginas.
 */
 
 /*Variáveis de Cores*/
@@ -74,15 +74,16 @@ header{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 div#hd_1{
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
     z-index: 999;
     padding: 20px 50px;
+    max-width: 1600px;
+    width: 100%;
     height: 74px;
     display: flex;
     justify-content: space-between;
@@ -139,6 +140,8 @@ div#itens_hd i{
 div#hd_2{
     margin: 74px 0 0 0;
     padding: 14px 50px;
+    max-width: 1600px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
